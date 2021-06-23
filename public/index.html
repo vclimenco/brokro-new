@@ -35,7 +35,7 @@
 
     <script>
       // Create worker
-      const myWorker = new Worker('StockWorker.js');
+      const myWorker = new Worker('/public/StockWorker.js');
 
       // // Send message to worker
       // myWorker.postMessage('Hello!');
@@ -45,9 +45,5 @@
         console.log(e.data);
       }
     </script>
-
-    <script src="/public/StockRepository.js"></script>
-    <script src="/public/StockService.js"></script>
-    <script src="/public/StockWorker.js"></script>
   </body>
 </html>
