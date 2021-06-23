@@ -1,4 +1,12 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+/*
+MOTO G4
+  Type	IPS LCD
+  Size	5.5 inches, 83.4 cm2 (~71.2% screen-to-body ratio)
+  Resolution	1080 x 1920 pixels, 16:9 ratio (~401 ppi density)
+  Protection	Corning Gorilla Glass 3
+*/
+
 
 var queryableFunctions = {
     // example #1: get the difference between two numbers:
