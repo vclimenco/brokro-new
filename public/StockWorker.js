@@ -10,7 +10,7 @@ const kavaBuyPrice = 3.0;
 const kavaSellPrice = 4.4;
 
 const getTicker = function (crypto) {
-  fetch('/public/sample.json')
+  fetch('/sample.json')
     .then(response => response.json())
     .then(data => console.log(data))
     .then(() => clearInterval(interval));

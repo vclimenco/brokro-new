@@ -27,7 +27,7 @@
       "type": "image/png"
     }],
   "scope": "/",
-  "start_url": "http://127.0.0.1:5500/public/index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#e8eaf6",
   "theme_color": "#3f51b5"
