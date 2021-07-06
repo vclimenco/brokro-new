@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/public/manifest.json">
     <title>Welcome to Firebase Hosting</title>
 
     <style media="screen">
@@ -37,25 +37,31 @@
 
     <script>
       // Create worker
-      const stockWorker = new Worker('/StockWorker.js');
+      const stockWorker = new Worker('/public/StockWorker.js');
 
       // Receive message from worker
       stockWorker.onmessage = function(e) {
         const msgContainer = document.querySelector("#message-container");
         msgContainer.innerHTML = JSON.stringify(e.data);
+        
+        if ('Notification' in navigator) {
+          
+        }
       }
     </script>
 
     <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        navigator.serviceWorker.register('/public/sw.js', { scope: '/public/' })
           .then(function(registration) {
                 console.log('Service Worker Registered');
           });
 
-        navigator.serviceWorker.ready.then(function(registration) {
-          console.log('Service Worker Ready');
-        });
+        // TODO: revert references to JS files
+
+        // navigator.serviceWorker.ready.then(function(registration) {
+        //   console.log('Service Worker Ready');
+        // });
       }
     </script>
   </body>
